@@ -7,9 +7,9 @@ $MODE = "DEV";
 
 if($MODE !== "DEV") {
   define("HOST", "localhost");
-  define("USER", "ocea54990813_root");
-  define("PASSWORD", "UdurydE8%");
-  define("DB_NAME", "ocea54990813_logistics");
+  define("USER", "dashdeli_root");
+  define("PASSWORD", ")C,(VaW@GW}Q");
+  define("DB_NAME", "dashdeli_log");
 }
 else {
   // LOCAL 
