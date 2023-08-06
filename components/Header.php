@@ -40,7 +40,7 @@
                   <div class="icon margin-top-5px"><span class="icon_mail_alt"></span></div>
                   <div class="text">
                     <span class="title-in">Email : </span> <br>
-                    <span class="font-weight-500 text-uppercase text-main-color">info@your-site.com</span>
+                    <span class="font-weight-500 text-uppercase text-main-color">info@dash-delivery.com</span>
                   </div>
                 </div>
               </div>
