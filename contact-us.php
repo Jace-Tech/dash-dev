@@ -26,23 +26,41 @@
           <h5>Phone :</h5>
           <span class="d-block"><i class="fa fa-phone text-main-color margin-right-10px" aria-hidden="true"></i><a href="https://api.whatsapp.com/send?phone=17572352012&text=Hi%2C%20my%20name%20is%20____.%20I%20want%20to%20make%20an%20enquiry%20about%20https%3A%2F%2Fdash-delivery.com" class="">+17572352012</a></span>
           <span class="d-block sm-mb-30px">
-          <h5 class="margin-top-20px">Address :</h5>
-          <div class="d-flex">
-          <i class="fa fa-map text-main-color margin-right-10px" aria-hidden="true"></i> 
-            <div class="text">
-              <span class="">
-                Al Ghayath St 28,
-              </span> <br>
-              <span class="">
-                Abu Dhabi,
-              </span> <br>
-              <span class="">
-                United Arab Emirates.
-              </span>
+            <h5 class="margin-top-20px">Address :</h5>
+            <div class="d-flex">
+              <i class="fa fa-map text-main-color margin-right-10px" aria-hidden="true"></i>
+              <div class="row">
+                <div class="my-2 col-sm-12 col-md-6">
+                  <div class="font-weight-500 mb-2">UAE:</div>
+                  <p class="" style="margin-bottom: 0;">Al Ghayath St 28,</p>
+                  <p class="" style="margin-bottom: 0;">Abu Dhabi,</p>
+                  <p class="" style="margin-bottom: 0;">United Arab Emirates.</p>
+                </div>
+
+                <div class="my-2 col-sm-12 col-md-6">
+                  <div class="font-weight-500 mb-2">USA:</div>
+                  <p class="" style="margin-bottom: 0;">34 Elm Street,</p>
+                  <p class="" style="margin-bottom: 0;">Springfield, IL 62701,</p>
+                  <p class="" style="margin-bottom: 0;">United States.</p>
+                </div>
+
+                <div class="my-2 col-sm-12 col-md-6">
+                  <div class="font-weight-500 mb-2">Canada:</div>
+                  <p class="" style="margin-bottom: 0;">67 Maple Avenue,</p>
+                  <p class="" style="margin-bottom: 0;">Toronto, ON M4B 1R8,</p>
+                  <p class="" style="margin-bottom: 0;">Canada.</p>
+                </div>
+
+                <div class="my-2 col-sm-12 col-md-6">
+                  <div class="font-weight-500 mb-2">UK:</div>
+                  <p class="" style="margin-bottom: 0;">89 Oak Lane,</p>
+                  <p class="" style="margin-bottom: 0;">London E1 6AN,</p>
+                  <p class="" style="margin-bottom: 0;">United Kingdom.</p>
+                </div>
+              </div>
             </div>
-          </div>
-          <h5 class="margin-top-20px">Email :</h5>
-          <span class="d-block sm-mb-30px"><i class="fa fa-envelope-open text-main-color margin-right-10px" aria-hidden="true"></i> info@yoursite.com </span>
+            <h5 class="margin-top-20px">Email :</h5>
+            <a href="mailto:info@dash-delivery.com" class="font-weight-500 text-uppercase text-main-color"><i class="fa fa-envelope-open text-main-color margin-right-10px" aria-hidden="true"></i>info@dash-delivery.com </a>
         </div>
 
         <div class="col-lg-6">
@@ -81,13 +99,7 @@
 
   <div class="map-layout">
     <div class="map-embed">
-      <iframe 
-      src="https://www.google.com/maps?q=AL+GHAYATH+ST+28,+ABU+DHABI,+UNITED+ARAB+EMIRATES&output=embed"
-      width="100%" 
-      height="390" 
-      frameborder="0" 
-      style="border:0" 
-      allowfullscreen></iframe>
+      <iframe src="https://www.google.com/maps?q=AL+GHAYATH+ST+28,+ABU+DHABI,+UNITED+ARAB+EMIRATES&output=embed" width="100%" height="390" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
     <div class="container">
       <div class="row">
@@ -101,16 +113,33 @@
                   <div class="d-flex">
                     <div class="icon margin-top-5px"><span class="icon_pin_alt"></span></div>
                     <div class="text">
-                      <span class="title-in">Location :</span> <br>
-                      <span class="font-weight-500 text-uppercase text-white">
-                        Al Ghayath St 28,
-                      </span> <br>
-                      <span class="font-weight-500 text-uppercase text-white">
-                        Abu Dhabi,
-                      </span> <br>
-                      <span class="font-weight-500 text-uppercase text-white">
-                        United Arab Emirates.
-                      </span>
+                      <div class="my-2">
+                        <div class="font-weight-500 mb-2">UAE:</div>
+                        <p class="text-white" style="margin-bottom: 0;">Al Ghayath St 28,</p>
+                        <p class="text-white" style="margin-bottom: 0;">Abu Dhabi,</p>
+                        <p class="text-white" style="margin-bottom: 0;">United Arab Emirates.</p>
+                      </div>
+
+                      <div class="my-2">
+                        <div class="font-weight-500 mb-2">USA:</div>
+                        <p class="text-white" style="margin-bottom: 0;">34 Elm Street,</p>
+                        <p class="text-white" style="margin-bottom: 0;">Springfield, IL 62701,</p>
+                        <p class="text-white" style="margin-bottom: 0;">United States.</p>
+                      </div>
+
+                      <div class="my-2">
+                        <div class="font-weight-500 mb-2">Canada:</div>
+                        <p class="text-white" style="margin-bottom: 0;">67 Maple Avenue,</p>
+                        <p class="text-white" style="margin-bottom: 0;">Toronto, ON M4B 1R8,</p>
+                        <p class="text-white" style="margin-bottom: 0;">Canada.</p>
+                      </div>
+
+                      <div class="my-2">
+                        <div class="font-weight-500 mb-2">UK:</div>
+                        <p class="text-white" style="margin-bottom: 0;">89 Oak Lane,</p>
+                        <p class="text-white" style="margin-bottom: 0;">London E1 6AN,</p>
+                        <p class="text-white" style="margin-bottom: 0;">United Kingdom.</p>
+                      </div>
                     </div>
                   </div>
                 </div>

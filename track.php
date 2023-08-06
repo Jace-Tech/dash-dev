@@ -36,6 +36,10 @@ $currencySymbol = [
 			display: inline-block;
 			position: relative;
 		}
+
+		.parcel-id {
+			font-size: calc(var(--f-size) * 1.3);
+		}
 	</style>
 	<?php include("./components/Header.php") ?>
 
@@ -182,8 +186,11 @@ $currencySymbol = [
 									</div>
 								</div>
 
-								<div class="header-right">
+								<div class="header-right" style="flex-direction: column;">
 									<h2 class="reciept-name">AIR BILL</h2>
+									<div class="mt-4">
+										<h3 class="parcel-id">Tracking ID: <b> <?= $_GET['track']; ?></b></h3>
+									</div>
 								</div>
 							</header>
 
@@ -199,12 +206,12 @@ $currencySymbol = [
 
 										<div class="part-details bordered">
 											<h4 class="part-title">Address:</h4>
-											<p class="part-value"><?= $TRACK_DETAILS['receiver_address'] ? $TRACK_DETAILS['receiver_name'] : 'Nill' ?></p>
+											<p class="part-value"><?= $TRACK_DETAILS['receiver_address'] ? $TRACK_DETAILS['receiver_address'] : 'Nill' ?></p>
 										</div>
 
 										<div class="part-details">
 											<h4 class="part-title">Email:</h4>
-											<p class="part-value"><?= $TRACK_DETAILS['receiver_email'] ? $TRACK_DETAILS['receiver_name'] : 'Nill' ?></p>
+											<p class="part-value"><?= $TRACK_DETAILS['receiver_email'] ? $TRACK_DETAILS['receiver_email'] : 'Nill' ?></p>
 										</div>
 									</div>
 
@@ -220,7 +227,7 @@ $currencySymbol = [
 
 										<div class="part-details">
 											<h4 class="part-title">Email:</h4>
-											<p class="part-value"><?= $TRACK_DETAILS['sender_email'] ? $TRACK_DETAILS['sender_name'] : 'Nill' ?></p>
+											<p class="part-value"><?= $TRACK_DETAILS['sender_email'] ? $TRACK_DETAILS['sender_email'] : 'Nill' ?></p>
 										</div>
 									</div>
 
