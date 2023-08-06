@@ -8,7 +8,7 @@ $MODE = "PROD";
 if($MODE !== "DEV") {
   define("HOST", "localhost");
   define("USER", "dashdeli_root");
-  define("PASSWORD", ")C,(VaW@GW}Q");
+  define("PASSWORD", "dash-delivery.com");
   define("DB_NAME", "dashdeli_log");
 }
 else {
