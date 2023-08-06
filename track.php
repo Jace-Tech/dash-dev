@@ -130,7 +130,7 @@ $currencySymbol = [
 
 						<div class="row mwb-2">
 							<div class="col-sm-12 col-md-4">
-								<p class="text-muted"><?= $INTERVAL->days; ?> days ago</p>
+								<p class="text-muted"><?= humanReadableTimeFormat($TRACK_DETAILS['date_shipment']); ?></p>
 							</div>
 
 							<div class="col-sm-12 col-md-8">
@@ -141,32 +141,46 @@ $currencySymbol = [
 							</div>
 						</div>
 
-						<div class="row mb-2">
-							<div class="col-sm-12 col-md-4">
-								<p class="text-muted">A days ago</p>
+						<?php if (!isReadyForClaiming($TRACK_DETAILS['date_arrival'])) : ?>
+							<div class="row mb-2">
+								<div class="col-sm-12 col-md-4">
+									<p class="text-muted"><?= humanReadableTimeFormat($TRACK_DETAILS['date_arrival']); ?></p>
+								</div>
+
+								<div class="col-sm-12 col-md-8">
+									<p class="text-muted">To arrive at <?= $TRACK_DETAILS['to']; ?> airport</p>
+								</div>
+							</div>
+						<?php endif; ?>
+
+						<?php if (isReadyForClaiming($TRACK_DETAILS['date_arrival'])) : ?>
+							<div class="row mb-2">
+								<div class="col-sm-12 col-md-4">
+									<p class="text-muted"><?= humanReadableTimeFormat($TRACK_DETAILS['date_arrival']); ?></p>
+								</div>
+
+								<div class="col-sm-12 col-md-8">
+									<p class="text-muted">Arrived at <?= $TRACK_DETAILS['to']; ?> airport</p>
+								</div>
 							</div>
 
-							<div class="col-sm-12 col-md-8">
-								<p class="text-muted">Arrived at <?= $TRACK_DETAILS['to']; ?> airport</p>
-							</div>
-						</div>
+							<div class="row">
+								<div class="col-sm-12 col-md-4">
+									<p class="text-muted">Now</p>
+								</div>
 
-						<div class="row">
-							<div class="col-sm-12 col-md-4">
-								<p class="text-muted">Now</p>
+								<div class="col-sm-12 col-md-8">
+									<p class="text-muted">Ready for claiming</p>
+								</div>
 							</div>
-
-							<div class="col-sm-12 col-md-8">
-								<p class="text-muted">Ready for claiming</p>
-							</div>
-						</div>
+						<?php endif; ?>
 					</div>
 
 					<h2 class="h2 my-5">Receipt</h2>
 					<div class="reciept-container">
 						<div class="receipt-body" id="receipt">
 
-						<!-- FLOATINGS -->
+							<!-- FLOATINGS -->
 							<!-- <img class="paid" src="./assets/images/paid.png" alt=""> -->
 							<img class="stamp" src="./assets/images/stamp.png" alt="">
 							<img class="stamp sign" src="./assets/images/sign.png" alt="">
@@ -360,9 +374,9 @@ $currencySymbol = [
 										</div>
 									</div>
 									<header class="part-head">8. Content of item</header>
-										<div class="part-details bordered">
-											<p class="part-value" style="text-transform: uppercase; line-height: 1.5; font-size: 1.2rem;"><?= $TRACK_DETAILS['title'] ?></p>
-										</div>
+									<div class="part-details bordered">
+										<p class="part-value" style="text-transform: uppercase; line-height: 1.5; font-size: 1.2rem;"><?= $TRACK_DETAILS['title'] ?></p>
+									</div>
 
 									<div class="part-details bordered">
 										<div class="part-value text-center">VOLUME TRIC/CHARGED WEIGHT</div>
@@ -410,7 +424,9 @@ $currencySymbol = [
 					<div class="row">
 						<div class="col-12">
 							<div class="d-flex my-4">
-								<a href="https://api.whatsapp.com/send?phone=17572352012&text=Hi%2C%20my%20name%20is%20____.%20I%20want%20to%20claim%20this%20parcel%20with%20id%20*<?= $TRACK_DETAILS['id'] ?>*%20https%3A%2F%2Fdash-delivery.com" class="btn text-sm btn-primary mr-3" style="font-size: .8rem">Claim Parcel</a>
+								<?php if (isReadyForClaiming($TRACK_DETAILS['date_arrival'])) : ?>
+									<a href="https://api.whatsapp.com/send?phone=17572352012&text=Hi%2C%20my%20name%20is%20____.%20I%20want%20to%20claim%20this%20parcel%20with%20id%20*<?= $TRACK_DETAILS['id'] ?>*%20https%3A%2F%2Fdash-delivery.com" class="btn text-sm btn-primary mr-3" style="font-size: .8rem">Claim Parcel</a>
+								<?php endif; ?>
 								<button id="print-btn" style="cursor: pointer; font-size: .8rem;" class="text-sm btn btn-secondary">Download Receipt</button>
 							</div>
 						</div>
@@ -462,8 +478,6 @@ $currencySymbol = [
 			printBtn.innerHTML = "Download Receipt"
 			printBtn.disabled = false
 		})
-
-
 	</script>
 </body>
 
